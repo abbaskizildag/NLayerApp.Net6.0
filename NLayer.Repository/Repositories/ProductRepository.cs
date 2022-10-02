@@ -15,7 +15,7 @@ namespace NLayer.Repository.Repositories
         {
         }
 
-        public async Task<List<Product>> GetProductsWithCategory()
+        public async Task<List<Product>> GetProductsWithCategoryAsync()
         {
             //Eager loadling. data'yı çekerken bağlı tabloyu çektik.
             return await _context.Products.Include(x=>x.Category).ToListAsync();
